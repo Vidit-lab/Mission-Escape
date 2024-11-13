@@ -1,0 +1,156 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0D0D0D; 
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+}
+
+/* 3D Horror Door Styling */
+.door {
+    width: 450px;
+    height: 500px;
+    
+    left: -120px;
+    top: 10%;
+    transform: perspective(600px) rotateY(+25deg); /* 3D open door effect */
+
+    margin-right: 40px;
+}
+
+.door-frame {
+    width: 100%;
+    height: 100%;
+    
+    box-shadow: inset 0 0 10px #000, 0 4px 15px #111;
+    position: relative;
+
+    /* Background Image */
+    background-image: url('door.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
+/* Door Text (Escape the Room) */
+.door h1 {
+    font-family: 'Creepster', sans-serif;
+    font-size: 30px;
+    color: #FF0000; 
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: rotateZ(+40deg);
+    text-shadow: 1px 1px 10px #FF0000, 0 0 20px #8B0000;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animated Box */
+.animated-box {
+    width: 300px;
+    height: 200px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1.5s ease;
+    
+}
+
+/* Input Box Styling */
+input[type="password"] {
+    padding: 12px;
+    width: 80%;
+    max-width: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #1A1A1A;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px #FF0000;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #333333;
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: 90px;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #1A1A1A;
+    box-shadow: 0 0 8px #FF0000;
+}
+
+button:active {
+    background-color: #8B0000;
+}
+
+/* Message Box Styling */
+.message-box {
+    position: absolute;
+    width: 300px;
+    height: 50px; 
+    margin-top: 300px;
+    margin-left: 480px;
+    padding: 10px;
+    background-color: #0D0D0D;
+    border-radius: 8px;
+}
+
+#message {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #FF0000, 0 0 20px #8B0000;
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 20px #FF0000, 0 0 30px #8B0000;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+

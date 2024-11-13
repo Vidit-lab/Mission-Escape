@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet"> <!-- Horror Font -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 3D Horror Door with Text -->
+        <div class="door">
+            <div class="door-frame">
+                <h1>Escape the Room</h1>
+            </div>
+        </div>
+
+        <!-- Input Box for Secret Key -->
+        <div id="box" class="animated-box">
+            <p>Enter the Secret Key to Escape:</p>
+            <input type="password" placeholder="Secret Key" id="secretKey">
+            <button onclick="checkKey()">Submit</button>
+        </div>
+
+        <div class="message-box">
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
